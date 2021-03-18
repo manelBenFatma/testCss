@@ -1,0 +1,121 @@
+.modal-footer {
+  flex-direction: row-reverse;
+  border-top: 0 none;
+}
+
+input[type="radio"][disabled] + label {
+  cursor: default;
+}
+
+i.icon {
+  width: 27px;
+  height: 29px;
+  position: absolute;
+}
+
+.telephone > i.material-icons {
+  width: 27px;
+  height: 29px;
+  position: absolute;
+  top: 7px;
+  left: 20px;
+}
+
+.email > i.icon {
+  background-image: url('src/assets/images/mail-icon-15.png');
+  background-size:20px;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: 5px;
+}
+
+.email > input,
+.telephone > input {
+  padding-left: 30px;
+}
+
+.email > .form-control.is-invalid,
+.telephone > .form-control.is-invalid,
+.ligneAdresse > .form-control.is-invalid {
+  background: url('src/assets/images/u4744.png');
+  background-size: 27px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.validation-message {
+  position: absolute;
+  display: flex;
+  right: 20px;
+  top: 8px;
+  font-size: 12px;
+}
+
+.validation-message::before {
+  padding-right: 1.25rem;
+  padding-top: 0.2rem;
+}
+
+.email > .form-control.is-valid,
+.telephone > .form-control.is-valid {
+  background: url('src/assets/images/u4739.png');
+  background-size:21px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.email > .is-valid + .validation-message::before {
+  content: "Email conforme";
+}
+.email > .is-invalid + .validation-message::before {
+  content: "Email invalide";
+}
+.email > .is-blacklisted + .validation-message::before {
+  content: "Email non autorisé";
+}
+.telephone > .is-valid + .validation-message::before {
+  content: "Téléphone conforme";
+}
+.telephone > .is-invalid + .validation-message::before {
+  content: "Téléphone invalide";
+}
+.telephone > .is-blacklisted + .validation-message::before {
+  content: "Téléphone non autorisé";
+}
+.ligne2 > .is-invalid + .text-danger::before,
+.ligne3 > .is-invalid + .text-danger::before,
+.ligne7 > .is-invalid + .text-danger::before{
+  content: "Le nombre maximum de caractères autorisé est 38 caractères ";
+  font-size: x-small;
+}
+
+.ligne4 > .is-invalid + .text-danger::before,
+.ligne5 > .is-invalid + .text-danger::before {
+  content: "Seuls les caractères a-z, A-Z, 0-9 et les espaces sont autorisés, avec un maximum de 38 caractères";
+  font-size: x-small;
+}
+
+.ligne6 > .is-invalid + .text-danger::before {
+  content: "Seuls les caractères A-Z, 0-9 et les espaces sont autorisés, avec un maximum de 38 caractères";
+  font-size: x-small;
+}
+
+.codeInsee > .is-invalid + .text-danger::before {
+  content: "Le code insee est invalide";
+  font-size: x-small;
+}
+
+.sousTypeTelephone {
+  margin: 15px 1% 0 0;
+}
+
+::ng-deep .custom-tooltip-blue {
+  background-color: #688197;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+btn-primary.disabled, .btn-primary:disabled {
+  background-color: #ff0066;
+  border-color: #007bff;
+}
